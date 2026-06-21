@@ -492,6 +492,33 @@ input {
   font-weight: 950;
 }
 
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lesson-type {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lesson-type.class {
+  color: var(--green-950);
+  background: var(--green-100);
+}
+
+.lesson-type.activity {
+  color: #6c4b00;
+  background: #fff1c2;
+}
+
 .class-list span {
   color: var(--muted);
   font-size: 0.88rem;

@@ -101,10 +101,18 @@ function renderClassCard(className, records) {
     .map((record) => {
       const date = escapeHtml(formatDate(record.classDate || record.date));
       const professor = escapeHtml(record.professor);
+      const type = String(record.type || '').trim();
+      const typeKey = normalizeKey(type);
+      const typeBadge = type
+        ? `<strong class="lesson-type ${typeKey === 'atividade' ? 'activity' : 'class'}">${escapeHtml(type)}</strong>`
+        : '';
 
       return `
         <li>
-          <time>${date}</time>
+          <div class="lesson-meta">
+            <time>${date}</time>
+            ${typeBadge}
+          </div>
           <span>Professor: <strong>${professor}</strong></span>
         </li>
       `;
