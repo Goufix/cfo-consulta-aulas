@@ -678,6 +678,24 @@ input {
   text-transform: uppercase;
 }
 
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-footer strong {
+  color: var(--green-800);
+}
+
 @media (max-width: 1180px) {
   .workspace {
     grid-template-columns: 280px minmax(0, 1fr);
