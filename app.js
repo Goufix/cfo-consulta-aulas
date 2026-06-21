@@ -114,7 +114,7 @@ function renderClassCard(className, records) {
       const typeBadge = type
         ? `<strong class="lesson-type ${typeKey === 'atividade' ? 'activity' : 'class'}">${escapeHtml(type)}</strong>`
         : '';
-      const commentsTooltip = comments ? `<span class="lesson-comments">${escapeHtml(comments)}</span>` : '';
+      const commentsContent = comments ? `<p class="lesson-comments">${escapeHtml(comments)}</p>` : '';
 
       return `
         <li class="${statusClass}">
@@ -123,7 +123,7 @@ function renderClassCard(className, records) {
             <span class="lesson-badges">${typeBadge}</span>
           </div>
           <span>Professor: <strong>${professor}</strong></span>
-          ${commentsTooltip}
+          ${commentsContent}
         </li>
       `;
     })
