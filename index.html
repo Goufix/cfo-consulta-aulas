@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CFO | Consulta de Aulas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Centro de Formação de Oficiais">
+          <img
+            class="brand-mark"
+            src="https://i.imgur.com/7Q1KoaM.png"
+            alt="Brasão do Centro de Formação de Oficiais"
+          />
+          <span class="brand-copy">
+            <span class="brand-line">
+              <span class="brand-word">CENTRO</span>
+              <span class="brand-link">de</span>
+              <span class="brand-word">FORMAÇÃO</span>
+            </span>
+            <span class="brand-line brand-line-bottom">
+              <span class="brand-link">de</span>
+              <span class="brand-display">OFICIAIS</span>
+            </span>
+          </span>
+        </a>
+
+        <nav class="nav-actions" aria-label="Navegação principal">
+          <span class="nav-chip active">Consulta de Aulas</span>
+          <span class="nav-divider" aria-hidden="true"></span>
+          <span class="nav-chip muted">CFO Database</span>
+        </nav>
+
+        <div class="profile-card" aria-label="Usuário atual">
+          <span class="profile-copy">
+            <strong>GOUFIX</strong>
+            <small>MEMBRO</small>
+          </span>
+          <img
+            class="profile-avatar"
+            src="https://www.habbo.com.br/habbo-imaging/avatarimage?user=Goufix&direction=3&head_direction=3&gesture=sml&size=m&headonly=1"
+            alt="Avatar do usuário logado"
+          />
+        </div>
+      </header>
+
+      <main class="app-card">
+        <section class="hero-panel" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">Sistema de consulta</p>
+            <h1 id="page-title">Consulta de Aulas</h1>
+            <p class="hero-description">
+              Verifique rapidamente quais aulas já constam no histórico de um policial do Centro de Formação de
+              Oficiais.
+            </p>
+          </div>
+
+          <div class="hero-badge" aria-label="Base importada">
+            <strong id="total-records">--</strong>
+            <span>registros importados</span>
+          </div>
+        </section>
+
+        <section class="workspace">
+          <aside class="search-panel" aria-labelledby="search-title">
+            <div class="panel-heading">
+              <span class="panel-kicker">Pesquisa</span>
+              <h2 id="search-title">Policial</h2>
+            </div>
+
+            <form id="search-form" class="search-form">
+              <label class="search-label" for="student-input">Nick do aluno</label>
+              <div class="search-control">
+                <input id="student-input" name="student" type="text" autocomplete="off" placeholder="Ex: ,Raity" />
+                <button type="submit">Pesquisar</button>
+              </div>
+            </form>
+
+            <div class="avatar-frame">
+              <img
+                id="student-avatar"
+                src="https://media.discordapp.net/attachments/805823509690449990/1518066617039192216/avatarimage.png?ex=6a389135&is=6a373fb5&hm=c55787463903bafddfaff497f6feec07d6d51d28875b88afa867f153392604c0&=&format=webp&quality=lossless"
+                alt="Avatar do policial pesquisado"
+              />
+            </div>
+
+            <div class="student-summary">
+              <span>Aluno consultado</span>
+              <strong id="student-name">Nenhum aluno pesquisado</strong>
+            </div>
+          </aside>
+
+          <section class="results-panel" aria-labelledby="classes-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Histórico encontrado</p>
+                <h2 id="classes-title">Aulas</h2>
+              </div>
+              <span id="result-status" class="status-pill">Aguardando pesquisa</span>
+            </div>
+
+            <div id="classes-grid" class="classes-grid" aria-live="polite"></div>
+          </section>
+
+          <aside class="assessment-panel" aria-labelledby="assessment-title">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Módulo</p>
+                <h2 id="assessment-title">Avaliação</h2>
+              </div>
+            </div>
+
+            <div id="evaluations-list" class="evaluations-list" aria-live="polite"></div>
+
+            <div class="notice-card">
+              <strong>Atenção!</strong>
+              <p>Se a aula não aparecer aqui, consulte o backup.</p>
+              <a href="https://www.policiarcc.com/t36929-cfo-registro-de-aulas" target="_blank" rel="noreferrer"
+                >Acessar backup</a
+              >
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
