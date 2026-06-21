@@ -277,8 +277,22 @@ body.theme-dark .class-list li:focus-within {
 }
 
 body.theme-dark .notice-card {
-  border-color: rgba(225, 189, 69, 0.38);
-  background: #1f1a0c;
+  border-color: rgba(255, 152, 32, 0.62);
+  background: #2b1707;
+}
+
+body.theme-dark .notice-card strong,
+body.theme-dark .notice-card a {
+  color: #ffb347;
+}
+
+body.theme-dark .empty-state,
+body.theme-dark .assessment-card strong {
+  color: #f3fbf6;
+}
+
+body.theme-dark .assessment-card span {
+  color: #c4d1cb;
 }
 
 body.theme-dark .lesson-type.class,
