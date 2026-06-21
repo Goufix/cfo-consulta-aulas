@@ -432,7 +432,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 22px;
   background: #fbfdfc;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .class-card header {
@@ -468,6 +468,7 @@ input {
 }
 
 .class-list {
+  position: relative;
   display: grid;
   gap: 10px;
   max-height: 300px;
@@ -486,6 +487,15 @@ input {
   border-left-width: 4px;
   border-radius: 16px;
   background: white;
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.class-list li:hover,
+.class-list li:focus-within {
+  z-index: 2;
+  border-color: rgba(17, 84, 61, 0.22);
+  background: #f8fcfa;
+  box-shadow: 0 8px 22px rgba(16, 25, 35, 0.08);
 }
 
 .class-list li.approved {
@@ -540,7 +550,7 @@ input {
   max-height: 0;
   margin: 0;
   overflow: hidden;
-  color: var(--muted);
+  color: #4f5c68;
   font-size: 0.78rem;
   line-height: 1.45;
   opacity: 0;
@@ -552,6 +562,12 @@ input {
   max-height: 120px;
   margin-top: 6px;
   opacity: 1;
+}
+
+.lesson-comments::before {
+  content: "Observações: ";
+  color: var(--green-900);
+  font-weight: 900;
 }
 
 .class-list span {
