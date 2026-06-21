@@ -472,7 +472,7 @@ body.theme-dark .status-pill.error {
 .avatar-frame {
   display: grid;
   place-items: center;
-  min-height: 260px;
+  min-height: 138px;
   margin: 0 22px 22px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 22px;
@@ -485,7 +485,7 @@ body.theme-dark .status-pill.error {
 
 .avatar-frame img {
   max-width: 170px;
-  max-height: 230px;
+  max-height: 124px;
   object-fit: contain;
 }
 
@@ -627,9 +627,13 @@ body.theme-dark .status-pill.error {
 }
 
 .class-list time {
-  color: var(--green-900);
+  color: var(--green-800);
   font-size: 0.86rem;
   font-weight: 950;
+}
+
+body.theme-dark .class-list time {
+  color: #d7eadf;
 }
 
 .lesson-meta {

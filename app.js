@@ -31,7 +31,6 @@ const MAX_RESULTS = 200;
 
 const searchForm = document.querySelector('#search-form');
 const studentInput = document.querySelector('#student-input');
-const studentName = document.querySelector('#student-name');
 const resultStatus = document.querySelector('#result-status');
 const classesGrid = document.querySelector('#classes-grid');
 const studentAvatar = document.querySelector('#student-avatar');
@@ -213,7 +212,6 @@ async function searchStudent(rawStudent) {
   const button = searchForm.querySelector('button');
   button.disabled = true;
   setStatus('Pesquisando');
-  studentName.textContent = rawStudent.trim();
   studentAvatar.src = `https://www.habbo.com.br/habbo-imaging/avatarimage?user=${encodeURIComponent(studentKey)}&direction=2&head_direction=2&size=m`;
 
   try {
