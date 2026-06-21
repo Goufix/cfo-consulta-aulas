@@ -103,15 +103,20 @@ function renderClassCard(className, records) {
       const professor = escapeHtml(record.professor);
       const type = String(record.type || '').trim();
       const typeKey = normalizeKey(type);
+      const status = String(record.status || '').trim();
+      const statusKey = normalizeKey(status);
       const typeBadge = type
         ? `<strong class="lesson-type ${typeKey === 'atividade' ? 'activity' : 'class'}">${escapeHtml(type)}</strong>`
+        : '';
+      const statusBadge = status
+        ? `<strong class="lesson-status ${statusKey === 'aprovado' ? 'approved' : 'failed'}">${escapeHtml(status)}</strong>`
         : '';
 
       return `
         <li>
           <div class="lesson-meta">
             <time>${date}</time>
-            ${typeBadge}
+            <span class="lesson-badges">${typeBadge}${statusBadge}</span>
           </div>
           <span>Professor: <strong>${professor}</strong></span>
         </li>

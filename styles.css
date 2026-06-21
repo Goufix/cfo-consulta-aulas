@@ -499,7 +499,15 @@ input {
   gap: 8px;
 }
 
-.lesson-type {
+.lesson-badges {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.lesson-type,
+.lesson-status {
   flex: 0 0 auto;
   padding: 4px 8px;
   border-radius: 999px;
@@ -517,6 +525,16 @@ input {
 .lesson-type.activity {
   color: #6c4b00;
   background: #fff1c2;
+}
+
+.lesson-status.approved {
+  color: #0d5137;
+  background: #daf5e8;
+}
+
+.lesson-status.failed {
+  color: #8a2424;
+  background: #f8dddd;
 }
 
 .class-list span {
