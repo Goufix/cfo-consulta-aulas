@@ -478,12 +478,22 @@ input {
 }
 
 .class-list li {
+  position: relative;
   display: grid;
   gap: 4px;
   padding: 12px;
   border: 1px solid #edf2ef;
+  border-left-width: 4px;
   border-radius: 16px;
   background: white;
+}
+
+.class-list li.approved {
+  border-left-color: #38a169;
+}
+
+.class-list li.failed {
+  border-left-color: #d64545;
 }
 
 .class-list time {
@@ -506,8 +516,7 @@ input {
   gap: 6px;
 }
 
-.lesson-type,
-.lesson-status {
+.lesson-type {
   flex: 0 0 auto;
   padding: 4px 8px;
   border-radius: 999px;
@@ -527,14 +536,30 @@ input {
   background: #fff1c2;
 }
 
-.lesson-status.approved {
-  color: #0d5137;
-  background: #daf5e8;
+.lesson-comments {
+  position: absolute;
+  right: 10px;
+  bottom: calc(100% + 8px);
+  z-index: 5;
+  width: min(280px, calc(100vw - 48px));
+  padding: 10px 12px;
+  border: 1px solid rgba(6, 47, 34, 0.14);
+  border-radius: 12px;
+  color: var(--ink);
+  background: white;
+  box-shadow: 0 14px 36px rgba(16, 25, 35, 0.16);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.lesson-status.failed {
-  color: #8a2424;
-  background: #f8dddd;
+.class-list li:hover .lesson-comments,
+.class-list li:focus-within .lesson-comments {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .class-list span {
