@@ -472,7 +472,7 @@ body.theme-dark .status-pill.error {
 .avatar-frame {
   display: grid;
   place-items: center;
-  min-height: 138px;
+  height: 138px;
   margin: 0 22px 22px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 22px;
@@ -552,7 +552,7 @@ body.theme-dark .status-pill.error {
   border: 1px solid var(--line);
   border-radius: 22px;
   background: #fbfdfc;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .class-card header {
@@ -563,6 +563,7 @@ body.theme-dark .status-pill.error {
   padding: 14px 16px;
   color: white;
   background: linear-gradient(135deg, var(--green-900), var(--green-700));
+  border-radius: 21px 21px 0 0;
 }
 
 .class-card h3 {
@@ -744,9 +745,13 @@ body.theme-dark .class-list time {
 }
 
 .evaluation-item time {
-  color: var(--green-900);
+  color: var(--green-800);
   font-size: 0.84rem;
   font-weight: 950;
+}
+
+body.theme-dark .evaluation-item time {
+  color: #d7eadf;
 }
 
 .evaluation-item span {
