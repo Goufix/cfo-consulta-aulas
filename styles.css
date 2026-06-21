@@ -821,8 +821,14 @@ body.theme-dark .evaluation-item time {
   text-transform: uppercase;
 }
 
-.page-footer strong {
+.page-footer a {
   color: var(--green-800);
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1180px) {
