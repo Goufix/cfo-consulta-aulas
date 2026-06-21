@@ -14,6 +14,22 @@
   --shadow: 0 24px 60px rgba(6, 47, 34, 0.12);
 }
 
+body.theme-dark {
+  --green-950: #dff8eb;
+  --green-900: #86d6aa;
+  --green-800: #63be8f;
+  --green-700: #3aa870;
+  --green-100: #132a22;
+  --gold: #e1bd45;
+  --ink: #edf6f1;
+  --muted: #9eb0a8;
+  --line: #254137;
+  --paper: #0e1714;
+  --surface: #08110e;
+  --danger: #ff8a8a;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,6 +42,14 @@ body {
   background:
     linear-gradient(rgba(6, 47, 34, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 47, 34, 0.035) 1px, transparent 1px),
+    var(--surface);
+  background-size: 24px 24px;
+}
+
+body.theme-dark {
+  background:
+    linear-gradient(rgba(134, 214, 170, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(134, 214, 170, 0.045) 1px, transparent 1px),
     var(--surface);
   background-size: 24px 24px;
 }
@@ -51,6 +75,11 @@ input {
   border-radius: 0 0 26px 26px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 10px 30px rgba(16, 25, 35, 0.08);
+}
+
+body.theme-dark .topbar {
+  background: rgba(14, 23, 20, 0.94);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 
 .brand {
@@ -163,6 +192,26 @@ input {
   border-left: 1px solid var(--line);
 }
 
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green-800);
+  background: var(--green-100);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--green-700);
+  transform: translateY(-1px);
+}
+
 .profile-copy {
   display: grid;
   text-align: right;
@@ -195,6 +244,63 @@ input {
   background: var(--paper);
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+body.theme-dark .app-card,
+body.theme-dark .class-card,
+body.theme-dark .assessment-card,
+body.theme-dark .notice-card {
+  background: var(--paper);
+}
+
+body.theme-dark .hero-description {
+  color: var(--muted);
+}
+
+body.theme-dark .class-card,
+body.theme-dark .evaluation-item,
+body.theme-dark .assessment-card {
+  border-color: var(--line);
+}
+
+body.theme-dark .class-list li,
+body.theme-dark .evaluation-item {
+  border-color: var(--line);
+  background: #111f1a;
+}
+
+body.theme-dark .class-list li:hover,
+body.theme-dark .class-list li:focus-within {
+  border-color: rgba(134, 214, 170, 0.32);
+  background: #162720;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+body.theme-dark .notice-card {
+  border-color: rgba(225, 189, 69, 0.38);
+  background: #1f1a0c;
+}
+
+body.theme-dark .lesson-type.class,
+body.theme-dark .status-pill {
+  color: #dff8eb;
+  background: #18362b;
+}
+
+body.theme-dark .lesson-type.activity {
+  color: #ffe6a1;
+  background: #3a2c0d;
+}
+
+body.theme-dark .evaluation-item.approved .evaluation-result {
+  color: #c9f7dc;
+  background: #143829;
+}
+
+body.theme-dark .evaluation-item.failed .evaluation-result,
+body.theme-dark .status-pill.error {
+  color: #ffd1d1;
+  background: #3a1717;
 }
 
 .hero-panel {

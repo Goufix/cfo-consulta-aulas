@@ -36,9 +36,33 @@ const resultStatus = document.querySelector('#result-status');
 const classesGrid = document.querySelector('#classes-grid');
 const studentAvatar = document.querySelector('#student-avatar');
 const evaluationsList = document.querySelector('#evaluations-list');
+const themeToggle = document.querySelector('#theme-toggle');
 
 const app = initializeApp(firebaseConfig);
 const database = getFirestore(app);
+
+function applyTheme(theme) {
+  const isDarkTheme = theme === 'dark';
+
+  document.body.classList.toggle('theme-dark', isDarkTheme);
+  themeToggle.setAttribute('aria-pressed', String(isDarkTheme));
+  themeToggle.querySelector('span').textContent = isDarkTheme ? '☀' : '☾';
+}
+
+function getInitialTheme() {
+  const storedTheme = localStorage.getItem('cfo-theme');
+
+  if (storedTheme) return storedTheme;
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function toggleTheme() {
+  const nextTheme = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+
+  localStorage.setItem('cfo-theme', nextTheme);
+  applyTheme(nextTheme);
+}
 
 function normalizeKey(value) {
   return String(value || '').trim().toLowerCase();
@@ -225,5 +249,8 @@ searchForm.addEventListener('submit', (event) => {
   searchStudent(studentInput.value);
 });
 
+themeToggle.addEventListener('click', toggleTheme);
+
+applyTheme(getInitialTheme());
 renderResults([]);
 renderEvaluations([]);
