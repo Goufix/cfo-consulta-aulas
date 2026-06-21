@@ -189,7 +189,7 @@ input {
 }
 
 .app-card {
-  margin-top: 28px;
+  margin-top: 18px;
   border-top: 6px solid var(--green-900);
   border-radius: 30px;
   background: var(--paper);
@@ -264,7 +264,7 @@ input {
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr) 300px;
   gap: 24px;
-  padding: 28px;
+  padding: 22px;
 }
 
 .search-panel,

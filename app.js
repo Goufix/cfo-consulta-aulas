@@ -34,7 +34,6 @@ const studentInput = document.querySelector('#student-input');
 const studentName = document.querySelector('#student-name');
 const resultStatus = document.querySelector('#result-status');
 const classesGrid = document.querySelector('#classes-grid');
-const totalRecords = document.querySelector('#total-records');
 const studentAvatar = document.querySelector('#student-avatar');
 const evaluationsList = document.querySelector('#evaluations-list');
 
@@ -228,4 +227,3 @@ searchForm.addEventListener('submit', (event) => {
 
 renderResults([]);
 renderEvaluations([]);
-totalRecords.textContent = '8.733';
