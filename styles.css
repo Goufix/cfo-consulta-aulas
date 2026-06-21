@@ -15,10 +15,10 @@
 }
 
 body.theme-dark {
-  --green-950: #dff8eb;
-  --green-900: #86d6aa;
-  --green-800: #63be8f;
-  --green-700: #3aa870;
+  --green-950: #e7f3ec;
+  --green-900: #0b3d2c;
+  --green-800: #126144;
+  --green-700: #16724e;
   --green-100: #132a22;
   --gold: #e1bd45;
   --ink: #edf6f1;
@@ -283,7 +283,7 @@ body.theme-dark .notice-card {
 
 body.theme-dark .lesson-type.class,
 body.theme-dark .status-pill {
-  color: #dff8eb;
+  color: #cfe7da;
   background: #18362b;
 }
 
@@ -293,7 +293,7 @@ body.theme-dark .lesson-type.activity {
 }
 
 body.theme-dark .evaluation-item.approved .evaluation-result {
-  color: #c9f7dc;
+  color: #cfe7da;
   background: #143829;
 }
 
